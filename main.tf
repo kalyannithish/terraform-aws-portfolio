@@ -95,6 +95,7 @@ resource "aws_instance" "webserver2" {
 resource "aws_lb" "myalb" {
   name               = "myalb"
   internal           = false
+  
   load_balancer_type = "application"
 
   security_groups = [aws_security_group.webSg.id]
